@@ -1,0 +1,31 @@
+#back {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    color: black;
+}
+
+ion-card {
+    border-radius: 10px;
+    max-width: 45rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+#cadastra {
+    border: solid 2px rgb(2, 255, 78);
+    border-radius: 10px;
+}
+
+#bolas {
+    background: url("/src/bolas.svg");
+    position: absolute;
+    left: 21.09%;
+    right: -0.58%;
+    top: 58.24%;
+    bottom: -45.67%;
+}

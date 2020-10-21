@@ -1,20 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h1>Bem vindo(a) ao LeagueFriends</h1>
+
+    <ion-buttons>
+      <ion-button routerLink="/cadastro" id="create-account" color="primary">Criar conta</ion-button>
+      <ion-button routerLink="/login">Login</ion-button>
+    </ion-buttons>
   </div>
 </ion-content>
