@@ -9,16 +9,17 @@
     <ion-card-header>
       <ion-card-title>Login</ion-card-title>
     </ion-card-header>
-    <form #f>
+    <form class="content-login">
       <ion-list>
         <ion-item>
-          <ion-label for="email" position="floating">Email</ion-label>
-          <ion-input name="email" placeholder="Digite seu email"></ion-input>
+          <ion-label for="email" position="floating">Email:</ion-label>
+          <ion-input #email name="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Senha</ion-label>
-          <ion-input placeholder="Digite sua senha"></ion-input>
+          <ion-label position="floating">Senha:</ion-label>
+          <ion-input #password type="password" name="password"></ion-input>
         </ion-item>
+        <ion-item lines="none"></ion-item>
         <ion-item lines="none">
           <ion-buttons slot="end">
             <ion-button type="submit" (click)="logIn(email, password)" id="loginbtn" size="large" color="secondary" expand="block">Login</ion-button>
