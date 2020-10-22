@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+  <a href="#" routerLink="/home">
+    <ion-icon id="back" name="arrow-back"></ion-icon>
+  </a>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <form #f>
+      <ion-list>
+        <ion-item>
+          <ion-label for="email" position="floating">Email</ion-label>
+          <ion-input name="email" placeholder="Digite seu email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input placeholder="Digite sua senha"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-buttons slot="end">
+            <ion-button type="submit" (click)="logIn(email, password)" id="loginbtn" size="large" color="secondary" expand="block">Login</ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-list>
+    </form>
+  </ion-card>
 
 </ion-content>
