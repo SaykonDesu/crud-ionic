@@ -1,16 +1,19 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <h1>Bem vindo(a) ao LeagueFriends</h1>
-
-    <ion-buttons>
+<ion-content id="seletor" color="light" [fullscreen]="true">
+  
+  <svg id="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6C63FF" fill-opacity="1" d="M0,288L60,250.7C120,213,240,139,360,117.3C480,96,600,128,720,160C840,192,960,224,1080,224C1200,224,1320,192,1380,176L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+   
+  <div id="bg">
+    <div id="container">
+      <h1>Bem vindo(a) ao LeagueFriends</h1>
       <ion-button routerLink="/cadastro" id="create-account" color="primary">Criar conta</ion-button>
       <ion-button routerLink="/login">Login</ion-button>
-    </ion-buttons>
+    </div>
   </div>
+  
 </ion-content>
+
+<ion-footer id="seletor" translucent="false" mode="ios" class="ion-no-border">
+  <ion-toolbar id="footer-toolbar">
+    <ion-title>2020 ©LeagueFriends Company</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,10 +1,45 @@
-#container {
-  margin-left: 12rem;
-  margin-top: 10rem;
+#footer-toolbar {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
-#create-account {
-  border-width: 3px;
-  border: solid 2px rgb(148, 191, 255);
-  border-radius: 10px;
+#container {
+  position: fixed;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-top: 18rem;
+  
+}
+
+#btnfooter {
+  width: 23rem;
+}
+
+#button-deck {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+#seletor {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#waves {
+  position: absolute;
+  top: 0;
+}
+
+ion-toolbar {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 2rem;
 }

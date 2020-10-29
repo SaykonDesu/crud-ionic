@@ -1,48 +1,72 @@
-<ion-content color="light">
+<ion-content color="light" [fullscreen] id="seletor">
+  <svg id="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6C63FF" fill-opacity="1" d="M0,256L80,261.3C160,267,320,277,480,282.7C640,288,800,288,960,261.3C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    
+    
+    
 
-  <a href="#" routerLink="/home">
-    <ion-icon id="back" name="arrow-back"></ion-icon>
-  </a>
+  <div id="container">
+    <a id="back-a" href="#" routerLink="/home">
+      <ion-icon id="back" name="chevron-back-circle-outline"></ion-icon>
+    </a>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Cadastro</ion-card-title>
-    </ion-card-header>
-    <form>
-      <ion-list>
-        <ion-item>
-          <ion-label position="fixed">Nickname</ion-label>
-          <ion-input placeholder="Digite seu nick"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Nome</ion-label>
-          <ion-input placeholder="Digite seu nome completo"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Email</ion-label>
-          <ion-input type="email" placeholder="Digite seu email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Senha</ion-label>
-          <ion-input type="password" placeholder="Digite sua senha"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Confirmação</ion-label>
-          <ion-input type="password" placeholder="Confirme sua senha"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="fixed">Nascimento</ion-label>
-          <ion-input type="date"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-        <ion-buttons slot="end">
-          <ion-button id="cadastra" name="cadastra" type="submit" color="secondary">Cadastrar</ion-button>
-        </ion-buttons>
-      </ion-item>
-      </ion-list>
-    </form>
-  </ion-card>
+    <ion-grid>
+      <h1>Faça seu cadastro...</h1>
 
-  <svg id="bolas"></svg>
+      <ion-card>
+        <form class="content-signup">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Nome completo:</ion-label>
+              <ion-input #nome required type="text" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Nickname:</ion-label>
+              <ion-input #nick required type="text" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Email:</ion-label>
+              <ion-input #email required type="email" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Data de nascimento:</ion-label>
+              <ion-input #nasc required name="datetime"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Senha:</ion-label>
+              <ion-input #password required type="password" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Confirmar senha:</ion-label>
+              <ion-input required type="password" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Número de celular:</ion-label>
+              <ion-input #celular type="number" required name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Cidade:</ion-label>
+              <ion-input #cidade required type="text"></ion-input>
+            </ion-item>
+            <hr>
+            <ion-item lines="none">
+              <ion-button expand="block" type="submit" (click)="signUp(nome, nick, email, nasc, password, celular, cidade )" id="loginbtn" color="primary" size="medium"
+                mode="ios">Cadastrar</ion-button>
+            </ion-item>
 
+          </ion-list>
+        </form>
+      </ion-card>
+    </ion-grid>
+  </div>
+  
+ 
 </ion-content>
+
+<ion-footer id="seletor" translucent="true" mode="ios" class="ion-no-border">
+  
+  
+  <ion-toolbar id="footer-toolbar">
+    <ion-title>2020 ©LeagueFriends Company</ion-title>
+  </ion-toolbar>
+
+</ion-footer>
