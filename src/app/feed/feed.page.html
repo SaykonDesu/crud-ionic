@@ -1,15 +1,60 @@
-<ion-content>
+<ion-content color="light">
 
+  <ion-item>
+  <a slot="end" href="#" (click)="logout()">
+    <ion-icon slot="start" [ios]="'log-out-outline'" [md]="'log-out-outline'"></ion-icon>
+  </a>
+  </ion-item>
   <div class="container">
-    <a href="#" (click)="logout()">
-      <ion-icon slot="start" [ios]="'log-out-outline'" [md]="'log-out-outline'"></ion-icon>
-    </a>
+    
+
+
+
+
+    <ion-title>Olá, {{nome}}</ion-title>
+
   </div>
 
-  <ion-title>Olá, {{nome}}</ion-title>
+  <div class="feed">
+    <ion-card class="publica">
+      <ion-card-content>
+        <form (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+          <ion-list>
+            <ion-textarea type="text" ngModel name="comentario" id="publica-input"
+              placeholder="No que você está pensando?"></ion-textarea>
+            <ion-item lines="none">
+              <ion-button size="default" type="submit" slot="end">Publicar</ion-button>
+            </ion-item>
+          </ion-list>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  
 
 
-
-  <ion-list>
+  <ion-list id="postagens">
+    <ion-card *ngFor="let post of arrPosts">
+      <ion-card-header>
+        <ion-card-subtitle>{{post.cidade}}</ion-card-subtitle>
+        <ion-card-title>{{post.nome}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{post.comentario}}
+      </ion-card-content>
+    </ion-card>
   </ion-list>
+</div>
+
+
 </ion-content>
+
+<svg id="waves-shadow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#8982FF" fill-opacity="0.5"
+    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,149.3C960,139,1056,149,1152,149.3C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+  </path>
+</svg>
+<svg id="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#6C63FF" fill-opacity="1"
+    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,149.3C960,139,1056,149,1152,149.3C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+  </path>
+</svg>

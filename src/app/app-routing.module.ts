@@ -2,25 +2,28 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'home ',
     pathMatch: 'full'
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+
+  {
     path: 'cadastro',
-    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    loadChildren: () => import('./cadastro/cadastro.module').then(m => m.CadastroPageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },  {
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+  },
+  {
     path: 'feed',
-    loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule)
+    loadChildren: () => import('./feed/feed.module').then(m => m.FeedPageModule)
   },
 
 ];

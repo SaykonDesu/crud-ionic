@@ -1,12 +1,12 @@
 ion-title {
     text-align: center;
     margin-top: 2rem;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 a {
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 ion-content {
@@ -15,4 +15,58 @@ ion-content {
 
 .container {
     margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#waves {
+    position: fixed;
+    bottom: 0rem;
+}
+
+#waves-shadow {
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 1.5rem;
+}
+
+#publica-input {
+    border: 1px solid rgb(104, 98, 98);
+    border-radius: 5px;
+}
+
+#postagens {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent !important;
+}
+
+#publicacao {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.publica {
+    width: 40rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.feed {
+    max-width: 40rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+ion-card {
+    border-radius: 10px;
+    margin-top: 1rem;
 }

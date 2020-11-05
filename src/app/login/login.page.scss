@@ -46,7 +46,7 @@ a:link, a:hover {
  }
 
  #bolas {
-     position: absolute;
+    position: absolute;
     bottom: 0;
     
  }
@@ -55,4 +55,10 @@ ion-toolbar {
     padding-top: 2rem;
     margin-bottom: 2rem;
     
+ }
+
+ #bolas-shadow {
+    position: absolute;
+     margin-bottom: 1rem;
+     bottom: 0;
  }
